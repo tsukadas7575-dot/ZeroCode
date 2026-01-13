@@ -3,18 +3,21 @@ package sample;
 public class SelfIntroduction {
 
 	public static void main(String[] args) {
+		
 		// TODO 自動生成されたメソッド・スタブ
-		String name = "塚田駿輔";
+		// 氏名
+		String name = "塚田　駿輔";
+		// 年齢
 		int age = 32;
+		// 趣味
 		String hobby = "筋トレ";
 
 		/*
 		* 自己紹介文を出力する処理
 		*/
-		
-		System.out.println("私の名前は" +"塚田駿輔"+ "です。");
-		System.out.println("年齢は" + 32+ "歳です。");
-		System.out.println("趣味は" + "筋トレ" + "です。");
+		System.out.println("私の名前は" + name + "です。");
+		System.out.println("年齢は" + age + "歳です。");
+		System.out.println("趣味は" + hobby  + "です。");
 	}
 	
 	
