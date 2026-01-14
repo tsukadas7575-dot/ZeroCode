@@ -8,42 +8,39 @@ public class Question1 {
 	[概要] メイン処理
 	-------------------------------------------------------------------------*/
     public static void main(String[] args) {
+    	
+      // Q1:変数宣言と初期値設定
+      byte byteNum = 0;
+      short shortNum = 0;
+      int intNum = 0;
+      long longNum = 0L;
+      float floatNum = 0.0f;
+      double doubleNum = 0.0;
+      char letter = '\u0000';
+      String letters = null;
+      boolean isBoolean = false;
+  	
+  	  //Q2:宣言各型の変数指定値を代入
+  	  //変数byteNumに10を代入
+      byteNum = 10;
+      //変数shortNumに100を代入
+      shortNum = 100;
+      //変数intNumに1000を代入
+      intNum = 1000;
+      //変数longNumに10000を代入
+      longNum = 10000;
+      //変数floatNumに9.5fを代入
+      floatNum = 9.5f;
+      //変数doubleNumに10.5を代入
+      doubleNum = 10.5;
+      //変数letterに"a"を代入
+      letter = 'a';
+      //変数lettersに"ハロー"を代入
+      letters = "ハロー";
+      //変数isBooleanにtrueを代入
+      isBoolean = true;
 
-        // Q1:変数宣言と初期値設定  Q2:宣言各型の変数指定値を代入
-    	//変数byteNum䛻10を代入
-        byte byteNum = 10;
-        //変数shortNum䛻100を代入
-        short shortNum = 100;
-        //変数intNum䛻1000を代入
-        int intNum = 1000;
-        //変数longNum䛻10000を代入
-        long longNum = 10000;
-        //変数floatNum䛻9.5fを代入
-        float floatNum = 9.5f;
-        //変数doubleNum䛻10.5を代入
-        double doubleNum = 10.5;
-        //変数letter䛻"a"を代入
-        char letter = 'a';
-        //変数letters䛻"ハロー"を代入
-        String letters = "ハロー";
-        //変数isBoolean䛻trueを代入
-        boolean isBoolean = true;
-
-        // コンソール出力
-        System.out.println("byteNum: " + byteNum);
-        System.out.println("shortNum: " + shortNum);
-        System.out.println("intNum: " + intNum);
-        System.out.println("longNum: " + longNum);
-        System.out.println("floatNum: " + floatNum);
-        System.out.println("doubleNum: " + doubleNum);
-        System.out.println("letter: " + letter);
-        System.out.println("letters: " + letters);
-        System.out.println("isBoolean: " + isBoolean);
-        
-        
-        
      // Q3: 代入した変数を使って出力
-
      // 11110 を出力
      long sum1 = byteNum + shortNum + intNum + longNum ; 
      System.out.println(sum1);
@@ -60,7 +57,7 @@ public class Question1 {
      long total =   sum2 + byteNum + shortNum + intNum + longNum;
      System.out.println(total);
      
-     // 小数点以外䛾数字を全䛶かけ䛶出力
+     // 小数点以外に数字を全てかけて出力
      long productIntegers = byteNum * shortNum * intNum * longNum;
      System.out.println(productIntegers);
 
