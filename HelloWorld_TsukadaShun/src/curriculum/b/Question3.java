@@ -6,7 +6,6 @@ public class Question3 {
 
     public static void main(String[] args) {
 
-        // Scannerは1回だけ
         Scanner scanner = new Scanner(System.in);
 
         // Q1: 1〜10
@@ -101,7 +100,7 @@ public class Question3 {
         for (int dan = 1; dan <= 9; dan++) {
             for (int kakeru = 1; kakeru <= 9; kakeru++) {
                 System.out.print(
-                    String.format("%02d * %02d = %02d", dan, kakeru, dan * kakeru)
+                        String.format("%02d * %02d = %02d", dan, kakeru, dan * kakeru)
                 );
                 if (kakeru < 9) {
                     System.out.print(" || ");
@@ -112,42 +111,61 @@ public class Question3 {
 
         System.out.println();
 
-        // Q12: 商品在庫管理
+        // ===========================================================================
+        // Q12: 商品在庫管理（修正）同じ商品名が複数回入力されても在庫数が変わらず反映されるように。
+        // ===========================================================================
+
         scanner.nextLine(); // nextIntの改行対策
 
         System.out.print("商品名を「、」区切りで入力してください：");
         String productInput = scanner.nextLine();
-
         String[] products = productInput.split("、");
 
-        int tvDisplayStock = (int)(Math.random() * 12);// 0〜11のランダム在庫
-        int tvStock = tvDisplayStock; // テレビ用
-        int displayStock = 11 - tvDisplayStock;// ディスプレイ用
+        // ★ 在庫は最初に1回だけ決める
+        int pcStock = (int)(Math.random() * 12);
+        int fridgeStock = (int)(Math.random() * 12);
+        int fanStock = (int)(Math.random() * 12);
+        int washerStock = (int)(Math.random() * 12);
+        int humidifierStock = (int)(Math.random() * 12);
+
+        // テレビとディスプレイは連動
+        int tvStock = (int)(Math.random() * 12);
+        int displayStock = 11 - tvStock;
 
         for (String product : products) {
 
             switch (product.trim()) {
 
                 case "パソコン":
+                    System.out.println("パソコンの残り台数は " + pcStock + "台です");
+                    break;
+
                 case "冷蔵庫":
+                    System.out.println("冷蔵庫の残り台数は " + fridgeStock + "台です");
+                    break;
+
                 case "扇風機":
+                    System.out.println("扇風機の残り台数は " + fanStock + "台です");
+                    break;
+
                 case "洗濯機":
+                    System.out.println("洗濯機の残り台数は " + washerStock + "台です");
+                    break;
+
                 case "加湿器":
-                    int stock = (int)(Math.random() * 12);
-                    System.out.println(product + "の残り台数は " + stock + "台です");
+                    System.out.println("加湿器の残り台数は " + humidifierStock + "台です");
                     break;
 
                 case "テレビ":
+                    System.out.println("テレビの残り台数は " + tvStock + "台です");
+                    break;
+
                 case "ディスプレイ":
-                    int result =
-                            product.trim().equals("テレビ")
-                                    ? tvStock
-                                    : displayStock;
-                    System.out.println(product + "の残り台数は " + result + "台です");
+                    System.out.println("ディスプレイの残り台数は " + displayStock + "台です");
                     break;
 
                 default:
-                    System.out.println("『 " + product + " 』は指定の商品ではありません");
+                    System.out.println("『 " + product.trim() + " 』は指定の商品ではありません");
             }
         }
 
