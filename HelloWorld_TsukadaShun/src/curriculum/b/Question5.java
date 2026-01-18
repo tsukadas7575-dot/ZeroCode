@@ -16,7 +16,6 @@ public class Question5 {
     public static boolean isEven(int number) {
         return number % 2 == 0; // 2で割り切れればtrue（偶数）
     }
-
     public static void main(String[] args) {
 
         // Q1 実行
