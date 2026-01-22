@@ -1,5 +1,7 @@
 package curriculum.k;
 
 public interface Payable {
-    int calculateSalary();
+    String getName();           // ← 名前を取得するメソッド
+    int calculateSalary();      // ← 給与を計算するメソッド
 }
+
