@@ -4,10 +4,10 @@ import java.util.Random;
 
 public class CPU {
     private int hand;
+    private Random rand = new Random(); // フィールドで1回だけ生成
 
     public void generateHand() {
-        Random rand = new Random();
-        hand = rand.nextInt(3);
+        hand = rand.nextInt(3); // 0〜2のランダム
     }
 
     public int getHand() {
