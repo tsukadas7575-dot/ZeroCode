@@ -1,0 +1,15 @@
+先攻: yan
+yan の攻撃 → Daemon HP: 72
+Daemon の攻撃 → yan HP: 87
+yan の攻撃 → Daemon HP: 59
+Daemon の攻撃 → yan HP: 75
+yan の攻撃 → Daemon HP: 46
+Daemon の攻撃 → yan HP: 63
+yan の攻撃 → Daemon HP: 33
+Daemon の攻撃 → yan HP: 51
+yan の攻撃 → Daemon HP: 20
+Daemon の攻撃 → yan HP: 39
+yan の攻撃 → Daemon HP: 7
+Daemon の攻撃 → yan HP: 27
+yan の攻撃 → Daemon HP: 0
+勝者: yan

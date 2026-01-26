@@ -18,6 +18,6 @@ public class Character {
     }
 
     public void attack(Character target) {
-        target.hp -= this.at;
+        target.hp = Math.max(0, target.hp - this.at); // HPマイナス防止
     }
 }
